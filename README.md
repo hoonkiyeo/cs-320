@@ -1,7 +1,5 @@
 # Computer Science 320
 
---- 
-
 - Intermediate approach to Data Science programming using Python.
 - Experience with basic tabular analysis in Python
 - Learn to implement data structures (e.g., graphs) to efficiently represent datasets.
