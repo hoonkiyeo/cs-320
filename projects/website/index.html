@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      function subscribe() {
+        var email = prompt("What is your email?", "????");
+
+        $.post({
+          type: "POST",
+          url: "email",
+          data: email,
+          contentType: "application/text; charset=utf-8",
+          dataType: "json"
+        }).done(function(data) {
+          alert(data);
+        }).fail(function(data) {
+          alert("POST failed");
+        });
+      }
+    </script>
+  </head>
+  <body style="background-color: powderblue;">
+    <h1>Welcome to the Ultimate Halloween Candy Power Rankings!!</h1>
+      <p>This website is constructed only by Kyle Yeo who is a senior student studying data science at the University of Wisconsin-Madison<p>
+      <ul>
+          <li><a href = "browse.html"> Want to look at the whole data? click here!</a></li>
+          <li><a href = "donate.html?from=<VERSION>"><font color = "<COLOR>"> Want to donate for Halloween candies? :)</a></li>
+      </ul> 
+    <br>
+        <button onclick="subscribe()">Subscribe me :)</button>
+        <br>
+        <br>
+        <h2>Histograms for both sugarpercent and pricepercent of Halloween candies</h2>
+        <img src="candy.svg?variable=sugarpercent"><br><br>
+        <img src="candy.svg?variable=pricepercent"><br><br>
+        <h2>Scatter plot</h2>
+        <img src="candy2.svg"><br><br>
+
+    <p>Enjoy the data.</p>
+  </body>
+</html>
